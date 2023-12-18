@@ -29,3 +29,19 @@ platform = st.selectbox('Select the social media platform:', ['Twitter', 'Facebo
 if st.button('Generate Post'):
     post = generate_social_media_post(theme, platform)
     st.text_area('Generated Post:', post, height=150)
+
+# Add custom CSS for footer
+footer_style = """
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+padding: 10px;
+background-color: #f5f5f5;
+"""
+# Footer
+st.markdown(
+    '<div style="{}">Developed by mirac | Contact at: mirac.eth@ethereum.email</div>'.format(footer_style),
+    unsafe_allow_html=True
+)
