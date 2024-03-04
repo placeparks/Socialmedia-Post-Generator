@@ -12,7 +12,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 def generate_social_media_post(theme, platform):
     try:
         response = openai.Completion.create(
-            engine="text-davinci-002",
+            engine="gpt-3.5-turbo-instruct",
             prompt=f"Create a creative and engaging {platform} post about {theme}.",
             max_tokens=50
         )
